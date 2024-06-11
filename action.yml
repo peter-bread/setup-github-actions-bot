@@ -1,5 +1,5 @@
-name: 'Setup GitHub Actions Bot'
-description: 'Configures git user information for github-actions[bot]'
+name: "Setup GitHub Actions Bot"
+description: "Configures git user information for github-actions[bot]"
 runs:
-  using: 'node20'
-  main: 'index.js'
+  using: "node20"
+  main: "dist/index.js"
