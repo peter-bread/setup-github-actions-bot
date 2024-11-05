@@ -1,0 +1,20 @@
+---
+name: test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: configure gh actions bot
+        uses: ./
+
+      - name: check results
+        run: |
+          git config --global user.name
+          git config --global user.email
