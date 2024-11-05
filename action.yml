@@ -1,5 +1,14 @@
+---
 name: "Setup GitHub Actions Bot"
 description: "Configures git user information for github-actions[bot]"
+
 runs:
-  using: "node20"
-  main: "dist/index.js"
+  using: composite
+  steps:
+    - name: Set Git Username
+      run: git config --global user.name "github-actions[bot]"
+      shell: bash
+
+    - name: Set Git Email
+      run: git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+      shell: bash
