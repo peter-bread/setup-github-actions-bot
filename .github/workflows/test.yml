@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  test:
+  latest:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
@@ -13,6 +13,20 @@ jobs:
 
       - name: configure gh actions bot
         uses: ./
+
+      - name: check results
+        run: |
+          git config --global user.name
+          git config --global user.email
+
+  stable:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: configure gh actions bot
+        uses: peter-bread/setup-github-actions-bot@v2
 
       - name: check results
         run: |
