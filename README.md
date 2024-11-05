@@ -13,9 +13,9 @@ don't need to remember the github actions bot credentials.
 ## Usage
 
 ```yaml
-      - name: checkout repository
-        uses: actions/checkout@v4
+- name: checkout repository
+  uses: actions/checkout@v4
 
-      - name: configure github actions bot
-        uses: peter-bread/setup-github-actions-bot@v1
+- name: configure github actions bot
+  uses: peter-bread/setup-github-actions-bot@v2
 ```
